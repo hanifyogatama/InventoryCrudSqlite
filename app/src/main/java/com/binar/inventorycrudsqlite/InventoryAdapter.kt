@@ -33,7 +33,7 @@ class InventoryAdapter(val listInventory: ArrayList<Inventory>) :
 
         holder.itemView.ivEdit.setOnClickListener {
             val intentKeEditActivity = Intent(it.context, EditActivity::class.java)
-            intentKeEditActivity.putExtra("student", listInventory[position])
+            intentKeEditActivity.putExtra("inventory", listInventory[position])
             it.context.startActivity(intentKeEditActivity)
         }
 

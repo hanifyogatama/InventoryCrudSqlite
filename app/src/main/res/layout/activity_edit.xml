@@ -39,6 +39,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/colorBlack"
+        android:text="Edit"
+        android:textSize="20sp"
+        app:layout_constraintTop_toBottomOf="@id/guide1"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+
+       />
+
+    <TextView
         android:id="@+id/tvNameItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -121,7 +133,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Save"
+        android:text="Edit"
         android:background="@drawable/button"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite"
