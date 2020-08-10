@@ -12,8 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         try {
             this.supportActionBar?.hide()
-        } catch (e: NullPointerException) {
-        }
+        } catch (e: NullPointerException) {}
 
         fabAdd.setOnClickListener {
             val intent = Intent(this, AddActivity::class.java)

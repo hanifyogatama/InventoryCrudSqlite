@@ -4,6 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#fff"
     tools:context=".EditActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <ImageView
+        android:id="@+id/ivWave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_wave"
+        app:layout_constraintBottom_toTopOf="@id/guide1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvNameItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/colorBlack"
+        android:text="Name Item"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@id/guide1" />
+
+    <EditText
+        android:id="@+id/edNameItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:hint="name item"
+        android:padding="10dp"
+        android:inputType="text"
+        android:background="@drawable/board"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@id/tvNameItem" />
+
+    <TextView
+        android:id="@+id/tvAmoutItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:textColor="@color/colorBlack"
+        android:inputType="number"
+        android:text="Amout Item"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@id/edNameItem" />
+
+    <EditText
+        android:id="@+id/edAmoutItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/board"
+        android:hint="amount item"
+        android:padding="10dp"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@id/tvAmoutItem" />
+
+    <TextView
+        android:id="@+id/tvDescItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorBlack"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto"
+        android:inputType="number"
+        android:text="Description"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@id/edAmoutItem" />
+
+    <EditText
+        android:id="@+id/edDescItem"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:minHeight="90dp"
+        android:hint="description"
+        android:padding="10dp"
+        android:gravity="start"
+        android:background="@drawable/board"
+        app:layout_constraintEnd_toEndOf="@id/guide3"
+        app:layout_constraintStart_toStartOf="@id/guide2"
+        app:layout_constraintTop_toBottomOf="@id/tvDescItem" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Save"
+        android:background="@drawable/button"
+        android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edDescItem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
