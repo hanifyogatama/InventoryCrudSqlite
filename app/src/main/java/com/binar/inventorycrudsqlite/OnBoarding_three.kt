@@ -1,10 +1,13 @@
 package com.binar.inventorycrudsqlite
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_on_boarding_three.*
+import kotlinx.android.synthetic.main.fragment_on_boarding_two.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -37,6 +40,14 @@ class OnBoarding_three : Fragment() {
         return inflater.inflate(R.layout.fragment_on_boarding_three, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btnNextOb3.setOnClickListener {
+            val intent = Intent(activity,MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of

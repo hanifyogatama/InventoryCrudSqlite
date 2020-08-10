@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import kotlinx.android.synthetic.main.fragment_on_boarding_one.*
+import kotlinx.android.synthetic.main.fragment_on_boarding_three.*
+import kotlinx.android.synthetic.main.fragment_on_boarding_two.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,6 +38,15 @@ class OnBoarding_two : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_on_boarding_two, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        btnNextOb2.setOnClickListener {
+            val activity = activity as OnBoardActivity
+            activity.changeToOnBoardingThree()
+        }
     }
 
     companion object {
