@@ -39,7 +39,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvNameItem"
+        android:id="@+id/tvLabelNameItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
@@ -61,7 +61,7 @@
         android:background="@drawable/board"
         app:layout_constraintEnd_toEndOf="@id/guide3"
         app:layout_constraintStart_toStartOf="@id/guide2"
-        app:layout_constraintTop_toBottomOf="@id/tvNameItem" />
+        app:layout_constraintTop_toBottomOf="@id/tvLabelNameItem" />
 
     <TextView
         android:id="@+id/tvAmoutItem"

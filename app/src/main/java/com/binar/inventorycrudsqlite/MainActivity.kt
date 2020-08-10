@@ -3,6 +3,7 @@ package com.binar.inventorycrudsqlite
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,5 +19,19 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, AddActivity::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        fetchData()
+    }
+
+    fun fetchData(){
+        val dbHandler = DatabaseHandler(this)
+        val listStudent = arrayListOf<Inventory>()
+        listStudent.addAll(dbHandler.viewAllInventories())
+        val adapter = InventoryAdapter(listStudent)
+        recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        recyclerView.adapter = adapter
     }
 }

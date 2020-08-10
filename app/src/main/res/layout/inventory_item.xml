@@ -14,7 +14,7 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:id="@+id/tvID"
+            android:id="@+id/tvLabelID"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
@@ -24,34 +24,86 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tvNameItem"
+            android:id="@+id/tvID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="text id"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintTop_toTopOf="@id/tvLabelID"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelID"
+            app:layout_constraintStart_toEndOf="@id/tvLabelID"
+            />
+
+        <TextView
+            android:id="@+id/tvLabelNameItem"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="Name Item :"
             android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvID" />
+            app:layout_constraintTop_toBottomOf="@id/tvLabelID" />
 
         <TextView
-            android:id="@+id/tvAmount"
+            android:id="@+id/tvNameItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="text name"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintTop_toTopOf="@id/tvLabelNameItem"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelNameItem"
+            app:layout_constraintStart_toEndOf="@id/tvLabelNameItem"
+            />
+
+        <TextView
+            android:id="@+id/tvLabelAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="Amout : "
             android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvNameItem" />
+            app:layout_constraintTop_toBottomOf="@id/tvLabelNameItem" />
 
         <TextView
-            android:id="@+id/tvDesc"
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="text amount"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintTop_toTopOf="@id/tvLabelAmount"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelAmount"
+            app:layout_constraintStart_toEndOf="@id/tvLabelAmount"
+            />
+
+        <TextView
+            android:id="@+id/tvLabelDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/roboto"
             android:text="Description"
             android:textColor="#000"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvAmount" />
+            app:layout_constraintTop_toBottomOf="@id/tvLabelAmount" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="text desc"
+            android:textColor="#000"
+            android:fontFamily="@font/roboto"
+            app:layout_constraintTop_toTopOf="@id/tvLabelDesc"
+            app:layout_constraintBottom_toBottomOf="@id/tvLabelDesc"
+            app:layout_constraintStart_toEndOf="@id/tvLabelDesc"
+            />
 
         <ImageView
             android:id="@+id/ivEdit"
